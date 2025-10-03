@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import BeforeAfterImage from "@/components/BeforeAfterImage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,19 +43,12 @@ export default function ProjectenPage() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {demoProjects.map((p) => (
               <article key={p.slug} className="group cursor-pointer overflow-hidden rounded-2xl border-2 border-slate-200 bg-white shadow-sm transition-all hover:border-blue hover:shadow-xl">
-                <div className="aspect-video overflow-hidden bg-gradient-to-br from-amber-100 to-orange-200 relative">
-                  <img
-                    src={
-                      p.slug === "renovatie-woning-b"
-                        ? "/fotos/B2.jpg"
-                        : p.slug === "renovatie-woning-c"
-                        ? "/fotos/C2.jpg"
-                        : `https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center&sig=${p.slug}`
-                    }
-                    alt={`${p.title} bouwproject`}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                  />
-                </div>
+                <BeforeAfterImage
+                  beforeSrc={p.slug === "renovatie-woning-b" ? "/fotos/B1.jpg" : p.slug === "renovatie-woning-c" ? "/fotos/C1.jpg" : `https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center&sig=${p.slug}`}
+                  afterSrc={p.slug === "renovatie-woning-b" ? "/fotos/B2.jpg" : p.slug === "renovatie-woning-c" ? "/fotos/C2.jpg" : `https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center&sig=${p.slug}`}
+                  alt={`${p.title} bouwproject`}
+                  className="aspect-video rounded-b-none bg-gradient-to-br from-amber-100 to-orange-200"
+                />
                 <div className="p-6">
                   <h2 className="text-xl font-semibold text-dark">{p.title}</h2>
                   <div className="mt-2 flex items-center gap-2 text-sm text-slate-600">
