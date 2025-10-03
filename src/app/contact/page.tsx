@@ -51,10 +51,13 @@ export default function ContactPage() {
               <h2 className="text-2xl font-semibold text-dark">Onze locatie</h2>
               <p className="mt-2 text-slate-600">We zijn actief in Amsterdam en omgeving.</p>
               <div className="mt-6 aspect-video w-full overflow-hidden rounded-2xl border-2 border-slate-200 bg-slate-50">
-                {/* TODO: embed Google Map once address is provided */}
-                <div className="flex h-full w-full items-center justify-center text-slate-400">
-                  Google Map (adres volgt)
-                </div>
+                <iframe
+                  title="Kaart – Dwergvinvisstraat 27, 1035 HM Amsterdam"
+                  src="https://www.google.com/maps?q=Dwergvinvisstraat%2027,%201035%20HM%20Amsterdam&output=embed"
+                  className="h-full w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
