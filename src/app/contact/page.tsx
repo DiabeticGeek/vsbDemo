@@ -27,7 +27,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-semibold text-dark">Neem contact op</h2>
               <p className="mt-2 text-slate-600">
-                Bel <a className="text-blue underline hover:text-dark" href="tel:+31628528582">+31 6 285 285 82</a> of mail naar:{" "}
+                Bel <a className="text-blue underline hover:text-dark" href="tel:+31628528582">+31 6 285 285 82</a> of mail naar{" "}
                 <a className="text-blue underline hover:text-dark" href="mailto:mats@vansoolingenbouw.nl">mats@vansoolingenbouw.nl</a>.
               </p>
 
