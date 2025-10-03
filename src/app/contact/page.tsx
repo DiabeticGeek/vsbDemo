@@ -21,6 +21,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info */}
+      <section className="py-16 md:py-20">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
